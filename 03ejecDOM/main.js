@@ -94,11 +94,12 @@ const misMares = [
     myDiv.appendChild(myImg);
     myImg.src = mar.imgUrl;
   
+    myDiv.appendChild(document.createElement("br"));  /*baja línea*/
+    myDiv.appendChild(myBoton);
     myBoton.innerHTML = "Eliminar elemento";
     myBoton.onclick = () => {
       myDiv.remove();
     };
-  
-    myDiv.appendChild(myBoton);
+    
     document.body.appendChild(myDiv);
   }
