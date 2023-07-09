@@ -48,6 +48,7 @@ for (const mar of mares){
     const myH4 = document.createElement ("h4");
     const myImag = document.createElement ("img");
 
+
     myDiv.appendChild (myH4);
     myH4.innerHTML = mar.title;
     myDiv.appendChild (myImag);
@@ -57,9 +58,47 @@ for (const mar of mares){
 
 
 /*1.5 Basandote en el ejercicio anterior. Crea un botón que elimine el último
-elemento de la serie de divs./*
+elemento de la serie de divs.*/
 
+const boton = document.createElement("button");
+boton.innerHTML = "Eliminar último elemento";
+document.body.appendChild(boton);
 
+boton.onclick = () => {
+  const divs = document.querySelectorAll("div");
+  const lastDiv = divs[divs.length - 1];
+  if (lastDiv) {
+    lastDiv.remove();
+  }
+};
 
 /*1.6 Basandote en el ejercicio anterior. Crea un botón para cada uno de los
 divs que elimine ese mismo elemento del html.*/
+
+const misMares = [
+    { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=1' },
+    { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=2' },
+    { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=3' },
+    { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=4' },
+    { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=5' }
+  ];
+  
+  for (const mar of misMares) {
+    const myDiv = document.createElement("div");
+    const myH4 = document.createElement("h4");
+    const myImg = document.createElement("img");
+    const myBoton = document.createElement("button");
+  
+    myDiv.appendChild(myH4);
+    myH4.innerHTML = mar.title;
+    myDiv.appendChild(myImg);
+    myImg.src = mar.imgUrl;
+  
+    myBoton.innerHTML = "Eliminar elemento";
+    myBoton.onclick = () => {
+      myDiv.remove();
+    };
+  
+    myDiv.appendChild(myBoton);
+    document.body.appendChild(myDiv);
+  }
