@@ -12,7 +12,7 @@ console.log(myh1.textContent);
 
 const myP = document.querySelectorAll("p");
 for (const parrafo of myP){
- console.log(parrafo);
+ console.log(parrafo.textContent);
 }
 
 
