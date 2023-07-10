@@ -106,4 +106,4 @@ const misMares = [
 
 
   /*      myBoton.addEventListener("click", (ev) => {
-   myDiv.remove(ev);               formula tb válida hecha en clase*/
+          myDiv.remove(ev);               formula tb válida hecha en clase*/
