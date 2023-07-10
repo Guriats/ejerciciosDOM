@@ -43,3 +43,26 @@ for (const city of cities){
     document.body.appendChild(divs);
 }
 
+const boton = document.createElement("button");
+const myDiv = document.createElement ("div");
+boton.innerHTML = "eliminar último";
+myDiv.appendChild(boton);
+
+boton.onclick = () =>{
+    const divs = document.querySelectorAll("div");
+    const lastDiv = divs[divs.length - 1];
+    if (lastDiv) {
+      lastDiv.remove();
+    }
+
+
+}
+
+document.body.appendChild(myDiv);
+
+
+
+
+
+
+
