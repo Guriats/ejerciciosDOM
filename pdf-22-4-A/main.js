@@ -2,32 +2,44 @@
 lista de div que contenga un elemento h4 para el titulo y otro elemento
 img para la imagen.*/
 
-const places = [
+
+
+
+const cities = [
     {
-    title: "Random title",
-    imgUrl:
-    "https://images.unsplash.com/photo-1506466010722-395aa2bef877?ixlib=
-    rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bG9yZCUyMG9mJTIwdGhlJTIw
-    cmluZ3N8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+      title: "París",
+      imgUrl: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFyaXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=60",
     },
     {
-    title: "Random title",
-    imgUrl:
-    "https://images.unsplash.com/photo-1570610155223-66279ba81b41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bG9yZCUyMG9mJTIwdGhlJTIw
+      title: "Tokio",
+      imgUrl: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dG9raW98ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=60",
     },
     {
-    title: "Random title",
-    imgUrl:
-    "https://images.unsplash.com/photo-1570888233388-35d777042d9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGxvcmQlMjBvZiUyMHRoZSUy
+      title: "Roma",
+      imgUrl: "https://images.unsplash.com/photo-1529260830199-42c24126f198?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cm9tYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60",
     },
     {
-    title: "Random title",
-    imgUrl:
-    "https://images.unsplash.com/photo-1490440101319-4c8eb3880432?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGxvcmQlMjBvZiUyMHRoZSUy
+      title: "Nueva York",
+      imgUrl: "https://plus.unsplash.com/premium_photo-1674940502327-883129aeddda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bnVldmElMjB5b3JrfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60",
     },
     {
-    title: "Random title",
-    imgUrl:
-    "https://images.unsplash.com/photo-1460453429228-912eec8be349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTN8fGxvcmQlMjBvZiUyMHRoZSUy
+      title: "Madrid",
+      imgUrl: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFkcmlkfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60",
     },
-    ];
+  ];
+
+
+for (const city of cities){
+    const divs = document.createElement ("div");
+    const myH4 = document.createElement ("h4");
+    const photo = document.createElement ("img");
+
+    myH4.innerHTML = city.title;
+    photo.src = city.imgUrl;
+
+    divs.appendChild(myH4);
+    divs.appendChild(photo);
+
+    document.body.appendChild(divs);
+}
+
