@@ -17,7 +17,3 @@ for (const album of albums){
 }
 document.body.appendChild(myUl);
 
-
-
-
-
