@@ -34,7 +34,7 @@ document.body.appendChild(myPtexto);
 
 /*2.5 Inserta en el h2 con la clase .fn-insert-here el texto 'Wubba Lubba dub dub'.*/
 
-    const WubbaText = document.querySelector('.fn-insert-here');
+    const WubbaText = document.querySelector('h2.fn-insert-here');
     WubbaText.innerHTML = 'Wubba Lubba dub dub';
     /*  document.body.appendChild(WubbaText);  con esta orden me lo pone debajo*/
     /*  WubbaText.textContent = 'Wubba Lubba dub dub'; esta expresión esta es correcta tb */

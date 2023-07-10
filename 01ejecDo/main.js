@@ -35,6 +35,7 @@ el atributo data-function="testMe".*/
 const MyTestMe = document.querySelectorAll('[data-function="testMe"]');
 for (const miTest of MyTestMe){
   console.log(miTest.textContent);}
+  
 
 /*1.6 Usa querySelector para mostrar por consola el 3 personaje con el atributo
 data-function="testMe".*/
