@@ -34,14 +34,31 @@ for (const city of cities){
     const myH4 = document.createElement ("h4");
     const photo = document.createElement ("img");
 
+    const myBoton = document.createElement("button");
+
+ 
+    myBoton.innerHTML= "borrar";
+
     myH4.innerHTML = city.title;
     photo.src = city.imgUrl;
+   
+
 
     divs.appendChild(myH4);
     divs.appendChild(photo);
+    divs.appendChild(document.createElement("br")); 
 
+    divs.appendChild (myBoton);
+
+    myBoton.onclick = () => {
+      divs.remove();
+    };
+    
     document.body.appendChild(divs);
 }
+
+
+
 
 const boton = document.createElement("button");
 const myDiv = document.createElement ("div");
@@ -49,14 +66,13 @@ boton.innerHTML = "eliminar último";
 myDiv.appendChild(boton);
 
 boton.onclick = () =>{
-    const divs = document.querySelectorAll("div");
-    const lastDiv = divs[divs.length - 1];
+    const myDivs = document.querySelectorAll("div");
+    const lastDiv = myDivs[myDivs.length - 1];
     if (lastDiv) {
       lastDiv.remove();
     }
-
-
 }
+
 
 document.body.appendChild(myDiv);
 
